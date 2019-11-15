@@ -1,33 +1,10 @@
-let nyName : string = 'this is name';
-let number : number = 1;
-let flag : boolean = true;
-let anything : any;
+let cls : string[] = []; // only assign type for variable
+// -> fix : let cls : string[] = [];
 
-// array
-let lists : string[] = ['1', '22q','s']; // number[], boolean[], any[]
+cls.push('add new string'); // no error when compile
 
-// using for function
-let fn_debug : void;
+// ERR: runtime Environment will error
+// ERROR : Cannot read property 'push' of undefined
 
-enum Color {
-    Red = 'red',
-    Green = 'green',
-    Blue = 'blue'
-}
-// using enum
-let _red = Color.Red; // red
-
-
-
-let _null : null;
-let _undefined : undefined;
-
-// TypeAssertion
-let books : string[];
-// => books. show all method
-
-// Cast
-let noType;
-let arrTypes = (<string[]>noType).push();
-// or
-arrTypes = (noType as string[]).push();
+// -> compilation time & run time
+console.log(cls);
