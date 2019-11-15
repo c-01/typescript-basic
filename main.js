@@ -16,3 +16,9 @@ var Color;
 var _red = Color.Red; // red
 var _null;
 var _undefined;
+// TypeAssertion
+var books;
+// => books. show all method
+// Cast
+var noType;
+var arrTypes = noType.push();

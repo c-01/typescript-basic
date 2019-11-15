@@ -21,3 +21,13 @@ let _red = Color.Red; // red
 
 let _null : null;
 let _undefined : undefined;
+
+// TypeAssertion
+let books : string[];
+// => books. show all method
+
+// Cast
+let noType;
+let arrTypes = (<string[]>noType).push();
+// or
+arrTypes = (noType as string[]).push();
