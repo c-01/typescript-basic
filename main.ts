@@ -1,10 +1,24 @@
-let cls : string[] = []; // only assign type for variable
-// -> fix : let cls : string[] = [];
+// Interface
+interface Point {
+    x: number,
+    y: number
+}
 
-cls.push('add new string'); // no error when compile
+let drawPoint = (point: {x: number, y: number}) => {// Inline Annotation
+    console.log(`Draw point at X: ${point.x} & Y: ${point.y}`);  
+}
 
-// ERR: runtime Environment will error
-// ERROR : Cannot read property 'push' of undefined
+let movePoint = (point: Point) => {// Inline Annotation
+    console.log(`Draw point at X: ${point.x} & Y: ${point.y}`);  
+}
 
-// -> compilation time & run time
-console.log(cls);
+let cutPoint = (point: Point) => {// Inline Annotation
+    console.log(`Draw point at X: ${point.x} & Y: ${point.y}`);  
+}
+
+drawPoint({
+    x: 100,
+    y: 2
+});
+
+// vi pham cohesion : nhung gi lien quan vs nhau thi nen nam chung vs nhau
