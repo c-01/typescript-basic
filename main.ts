@@ -1,12 +1,3 @@
-// Interface
-// interface Point {
-//     x: number;
-//     y: number;
-// }
-
-
-// vi pham cohesion : nhung gi lien quan vs nhau thi nen nam chung vs nhau
-// ->  using Class
 
 class Point { // has Access modifiers| same php
 
@@ -25,11 +16,11 @@ class Point { // has Access modifiers| same php
     }
 
     // Getters & Setters
-    get getX() {
+    get x() {
         return this._x;
     }
 
-    set setX(value: number) {
+    set x(value: number) {
         if (value < 0) {
             throw new Error('Value cannot be less than 0');
         }
@@ -38,7 +29,7 @@ class Point { // has Access modifiers| same php
 }
 
 let point = new Point(3,4);
-point.setX = 199;
-console.log(point.getX); // correct <> getX() wrong
+point.x = 199;
+console.log(point.x);
 
 point.drawPoint();
